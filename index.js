@@ -186,6 +186,9 @@ app.use(bodyParser.json());
 //   });
 //   res.send("Done!");
 // });
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
 
 app.get("/allHoldings", async (req, res) => {
   let allHoldings = await HoldingsModel.find({});
